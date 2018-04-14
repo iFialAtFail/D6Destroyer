@@ -149,7 +149,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ca8f1a7dbbbd4f3e8d1c220ca89b16a, type: 2}
   - {fileID: 11400000, guid: 2965783dc1ed54ef5be9651ff67f97c0, type: 2}
   - {fileID: 11400000, guid: 0083a6c955aeb471caea5ddbe9b63c6a, type: 2}
-  powerupStateType: {fileID: 11400000, guid: 72169a9c322614648abd915bb80f9532, type: 2}
+  powerupStateType: {fileID: 0}
 --- !u!114 &114845169106969268
 MonoBehaviour:
   m_ObjectHideFlags: 1
