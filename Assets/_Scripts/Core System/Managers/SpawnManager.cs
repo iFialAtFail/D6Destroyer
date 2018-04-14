@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
         powerupBtmTimeRng = 30,
         powerupTopTimeRng = 60 ,
         antiPowerupBtmTimeRng = 20,
-        antiPowerupTopTimeRng = 60};
+        antiPowerupTopTimeRng = 90};
     private SpawnParameters normalSpawnRange = new SpawnParameters { 
         timeRangeBtmLmt = 2, 
         timeRangeTopLmt = 4,
@@ -42,10 +42,10 @@ public class SpawnManager : MonoBehaviour
         powerupBtmTimeRng = 30, 
         powerupTopTimeRng = 60 ,
         antiPowerupBtmTimeRng = 20,
-        antiPowerupTopTimeRng = 60};
+        antiPowerupTopTimeRng = 90};
     private SpawnParameters hardSpawnRange = new SpawnParameters { 
-        timeRangeBtmLmt = 1f, 
-        timeRangeTopLmt = 2, 
+        timeRangeBtmLmt = 2f, 
+        timeRangeTopLmt = 4, 
         difficultyPctModifier = .99f, 
         difficultyTimeStep = 2f,
         spawnPctBtmRange = .5f, 
@@ -53,10 +53,10 @@ public class SpawnManager : MonoBehaviour
         powerupBtmTimeRng = 30, 
         powerupTopTimeRng = 60 ,
         antiPowerupBtmTimeRng = 20,
-        antiPowerupTopTimeRng = 60};
+        antiPowerupTopTimeRng = 90};
     private SpawnParameters hardCoreSpawnRange = new SpawnParameters { 
-        timeRangeBtmLmt = .5f, 
-        timeRangeTopLmt = 4f, 
+        timeRangeBtmLmt = 4f, 
+        timeRangeTopLmt = 5f, 
         difficultyPctModifier = .99f, 
         difficultyTimeStep = 1f, 
         spawnPctBtmRange = .5f, 
@@ -64,7 +64,7 @@ public class SpawnManager : MonoBehaviour
         powerupBtmTimeRng = 30,
         powerupTopTimeRng = 60, 
         antiPowerupBtmTimeRng = 20, 
-        antiPowerupTopTimeRng = 60 };
+        antiPowerupTopTimeRng = 90 };
 
     private class SpawnParameters
     {
