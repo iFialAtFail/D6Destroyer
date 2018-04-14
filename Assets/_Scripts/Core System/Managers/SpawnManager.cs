@@ -97,6 +97,7 @@ public class SpawnManager : MonoBehaviour
         startTime = Time.time;
         difficultyTimer = Time.time;
         powerupTime = Time.time;
+        antiPowerupTime = Time.time;
     }
 
     // Update is called once per frame
