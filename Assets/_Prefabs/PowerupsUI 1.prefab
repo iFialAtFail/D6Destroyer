@@ -678,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 114491731132055110}
   fadePercentage: 0.15
-  timeInSecondsForFading: {fileID: 11400000, guid: ff18adac9b93e4628a8ba9d5305c0dd7,
+  timeInSecondsForFading: {fileID: 11400000, guid: 740dcc1ab2b32fc408804845edbe6d63,
     type: 2}
   debug: 0
 --- !u!114 &114223991223938640

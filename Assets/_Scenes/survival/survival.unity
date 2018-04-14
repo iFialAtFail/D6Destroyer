@@ -434,25 +434,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 114225214635840540, guid: 819a39c35119c4a018d2f2ab4cec9d49,
-        type: 2}
-      propertyPath: gameManager
-      value: 
-      objectReference: {fileID: 364915132}
-    - target: {fileID: 114225214635840540, guid: 819a39c35119c4a018d2f2ab4cec9d49,
-        type: 2}
-      propertyPath: gravTarget
-      value: 
-      objectReference: {fileID: 1652367628}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819a39c35119c4a018d2f2ab4cec9d49, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &364915132 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114983446354074468, guid: d6c47e62e6bae40429404c859435b3e0,
-    type: 2}
-  m_PrefabInternal: {fileID: 267632434}
-  m_Script: {fileID: 11500000, guid: e70007a20c48e3e4bb17ac87224e60e7, type: 3}
 --- !u!1 &388125717
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,96 +679,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114044202801023210, guid: 700b1e025e3914de49b7d547c526cd6a,
-        type: 2}
-      propertyPath: antiPowerup
-      value: 
-      objectReference: {fileID: 114589303299225524, guid: abd0c9ce085b34caf999db73f6089471,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 700b1e025e3914de49b7d547c526cd6a, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &856985152 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4115057080085006, guid: f6fd2c410a4d246288e4d9e4f63828f5,
-    type: 2}
-  m_PrefabInternal: {fileID: 621232622}
 --- !u!20 &940113535 stripped
 Camera:
   m_PrefabParentObject: {fileID: 20003090761311690, guid: 390b2d610d028473b8606e11a19ca9eb,
     type: 2}
   m_PrefabInternal: {fileID: 50834652}
---- !u!1 &1011984870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1011984871}
-  - component: {fileID: 1011984873}
-  - component: {fileID: 1011984872}
-  m_Layer: 0
-  m_Name: FireRatePowerupHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1011984871
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1011984870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 856985152}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1011984872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1011984870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 26dfd73074a05487fba2f09ab01f6da5, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1011984873}
-        m_MethodName: SpeedUpFireRate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1011984873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1011984870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5c4969b6bb9486e9a3db6381943982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: {fileID: 11400000, guid: e9b9e7c2753abae45946bdfdf6eab387, type: 2}
-  rateModifier: 1.5
 --- !u!1001 &1050233656
 Prefab:
   m_ObjectHideFlags: 0
@@ -899,7 +801,7 @@ Prefab:
     - target: {fileID: 224650921842538694, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 448.00024
+      value: 171.88391
       objectReference: {fileID: 0}
     - target: {fileID: 224650921842538694, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
@@ -929,7 +831,7 @@ Prefab:
     - target: {fileID: 224964837374469634, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 558.00024
+      value: 281.8839
       objectReference: {fileID: 0}
     - target: {fileID: 224964837374469634, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
@@ -959,7 +861,7 @@ Prefab:
     - target: {fileID: 224713124337686538, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 668.00024
+      value: 391.8839
       objectReference: {fileID: 0}
     - target: {fileID: 224713124337686538, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
@@ -989,7 +891,7 @@ Prefab:
     - target: {fileID: 224171037267108140, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 778.00024
+      value: 501.8839
       objectReference: {fileID: 0}
     - target: {fileID: 224171037267108140, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
@@ -1019,7 +921,7 @@ Prefab:
     - target: {fileID: 224043346831021218, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 888.00024
+      value: 611.8839
       objectReference: {fileID: 0}
     - target: {fileID: 224043346831021218, guid: f507c623cd5ba419f8345ca8065376b8,
         type: 2}
@@ -1292,11 +1194,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b35ae28c6cd8476b8cc7714a8d1bb58, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1652367628 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1828695876689180, guid: 6cccbb12edf3a47a3b73785c83cc216b,
-    type: 2}
-  m_PrefabInternal: {fileID: 5341648}
 --- !u!1001 &1825499064
 Prefab:
   m_ObjectHideFlags: 0

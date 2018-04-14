@@ -14,7 +14,7 @@ public class IntVariableTextSetter : MonoBehaviour
         text.text = intVariable.Value.ToString();
     }
 
-	public void Start()
+	public void Update()
 	{
         UpdateText();
 	}

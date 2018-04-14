@@ -304,14 +304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90dbde870661fda4d955eacf41f6d86d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSet: {fileID: 11400000, guid: db76dcea7d93d7b4888d09a12a90904f, type: 2}
-  projectileSet: {fileID: 11400000, guid: 22a79ad2d62e9304eaab83787b2cac2d, type: 2}
-  splitState: {fileID: 11400000, guid: 45ebc3c16cc934343a8099bf0089ba3d, type: 2}
-  drag: {fileID: 11400000, guid: e5b291d27e2dac24099b3f53727eff0b, type: 2}
-  fireRate: {fileID: 11400000, guid: e9b9e7c2753abae45946bdfdf6eab387, type: 2}
-  gameManager: {fileID: 0}
-  gravTarget: {fileID: 0}
-  powerupDuration: 20
 --- !u!114 &114432119920063096
 MonoBehaviour:
   m_ObjectHideFlags: 1

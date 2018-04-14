@@ -11,6 +11,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1987599544952742}
   m_IsPrefabParent: 1
+--- !u!1 &1703550533217306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4125551913349160}
+  - component: {fileID: 114478763489216990}
+  - component: {fileID: 114669299481705550}
+  m_Layer: 0
+  m_Name: FireRatePowerupHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1987599544952742
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,8 +56,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4125551913349160}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4125551913349160
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703550533217306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4115057080085006}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114306534705637308
@@ -56,6 +87,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   splitState: {fileID: 11400000, guid: 45ebc3c16cc934343a8099bf0089ba3d, type: 2}
   shouldResetOnDestroy: 1
+--- !u!114 &114478763489216990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703550533217306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5c4969b6bb9486e9a3db6381943982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: {fileID: 11400000, guid: e9b9e7c2753abae45946bdfdf6eab387, type: 2}
+  rateModifier: 1.5
 --- !u!114 &114495866422119302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,6 +113,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: {fileID: 11400000, guid: e9b9e7c2753abae45946bdfdf6eab387, type: 2}
   shouldResetOnDestroy: 1
+--- !u!114 &114669299481705550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703550533217306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e839e4c12473014b9b3d3faccc0f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 26dfd73074a05487fba2f09ab01f6da5, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114478763489216990}
+        m_MethodName: SpeedUpFireRate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114856034131433216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,7 +158,6 @@ MonoBehaviour:
   projectile: {fileID: 1298408064691032, guid: a39ac5bc0028b214ba0f251e612902a7, type: 2}
   speed: 10
   shotDirection: -0.5
-  speedState: 1
 --- !u!114 &114955061201775512
 MonoBehaviour:
   m_ObjectHideFlags: 1
