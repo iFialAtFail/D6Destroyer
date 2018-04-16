@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "311188095871",
+    "firebase_url": "https://d6-destroyer.firebaseio.com",
+    "project_id": "d6-destroyer",
+    "storage_bucket": "d6-destroyer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311188095871:android:833dbcc449057ac9",
+        "android_client_info": {
+          "package_name": "tech.manleysoftware.d6destroyer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311188095871-9936utqai4ug4m2ih1j5c0lmi11hbogn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYHKqVg5nBpfpAa6gyjgC6UgcQt5OjqVM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

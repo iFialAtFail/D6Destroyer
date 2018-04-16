@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: tech.ManleySoftware.FallingShooter
+    Android: tech.manleysoftware.d6destroyer
     iOS: org.ManleySoftware.FallingShooter
   buildNumber: {}
   AndroidBundleVersionCode: 1
