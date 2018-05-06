@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeRangeBtmLmt: 2
   timeRangeTopLmt: 4
-  spawnPctBtmRange: 0.99
-  spawnPctTopRange: 2
-  difficultyPctModifier: 0.2
-  difficultyTimeStep: 0.4
+  spawnPctBtmRange: 0.2
+  spawnPctTopRange: 0.4
+  difficultyPctModifier: 0.99
+  difficultyTimeStep: 2
   powerupBtmTimeRng: 30
   powerupTopTimeRng: 60
   antiPowerupBtmTimeRng: 20

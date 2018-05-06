@@ -12,6 +12,7 @@ public class SpawnManager : MonoBehaviour
 {
     public Spawner[] spawners;
     public IntVariable difficulty;
+    public List<D6Destroyer.ScriptableObjects.SpawnParameters> spawnParameters = new List<D6Destroyer.ScriptableObjects.SpawnParameters>();
 
     public Powerup powerup;
     public AntiPowerup antiPowerup;
@@ -114,22 +115,29 @@ public class SpawnManager : MonoBehaviour
     /// </summary>
     protected void SpawnTargets()
     {
-        switch (difficulty.Value)
+        if (spawnParameters.Count > 0)
         {
-            case 1:
-                SpawnTargets(easySpawnRange);
-                break;
-            case 2:
-                SpawnTargets(normalSpawnRange);
-                break;
-            case 3:
-                SpawnTargets(hardSpawnRange);
-                break;
-            case 4:
-                SpawnTargets(hardCoreSpawnRange);
-                break;
-            default:
-                break;
+            SpawnTargets(spawnParameters[difficulty.Value - 1]); //difficulty is not 0 based.
+        }
+        else
+        {
+            switch (difficulty.Value)
+            {
+                case 1:
+                    SpawnTargets(easySpawnRange);
+                    break;
+                case 2:
+                    SpawnTargets(normalSpawnRange);
+                    break;
+                case 3:
+                    SpawnTargets(hardSpawnRange);
+                    break;
+                case 4:
+                    SpawnTargets(hardCoreSpawnRange);
+                    break;
+                default:
+                    break;
+            }
         }
 
     }
@@ -141,6 +149,71 @@ public class SpawnManager : MonoBehaviour
     /// <param name="timeRange">The range in seconds to have the spawner fire.</param>
     /// <param name="pctRange">The percentage range you want indices chosen. .1f would be 10% of the spawners.</param>
     private void SpawnTargets(SpawnParameters parameters)
+    {
+        //Increase difficulty independent of spawn rate of targets.
+        float stepTime = (Time.time - difficultyTimer);
+        if (stepTime > parameters.difficultyTimeStep)
+        {
+            parameters.timeRangeBtmLmt *= parameters.difficultyPctModifier;
+            parameters.timeRangeTopLmt *= parameters.difficultyPctModifier;
+            difficultyTimer = Time.time;
+        }
+
+        float powTime = (Time.time - powerupTime);
+        if (powTime > UnityEngine.Random.Range(parameters.powerupBtmTimeRng, parameters.powerupTopTimeRng))
+        {
+            powerupTime = Time.time;
+            int spawner = UnityEngine.Random.Range(0, spawners.Length);
+            spawners[spawner].Spawn(powerup.gameObject);
+            return;//short circuit for now to handle only spawning the target.
+        }
+
+        float antipowTime = (Time.time - antiPowerupTime);
+        if (antipowTime > UnityEngine.Random.Range(parameters.antiPowerupBtmTimeRng, parameters.antiPowerupTopTimeRng))
+        {
+            antiPowerupTime = Time.time;
+            int spawner = UnityEngine.Random.Range(0, spawners.Length);
+            spawners[spawner].Spawn(antiPowerup.gameObject);
+            return;//short circuit for now to handle only spawning the target.
+        }
+
+
+        //Spawn targets within the range specified for the given difficulty.
+        float time = (Time.time - startTime);
+        if (time > UnityEngine.Random.Range(parameters.timeRangeBtmLmt, parameters.timeRangeTopLmt))
+        {
+
+            startTime = Time.time;
+
+            int numberOfSpawnersToFire = Mathf.RoundToInt(spawners.Length * UnityEngine.Random.Range(parameters.spawnPctBtmRange, parameters.spawnPctTopRange));// Take total amount of spawners and multiply them by a percentage.
+            int[] selectedIndices = new int[numberOfSpawnersToFire];
+
+            initializeArray(ref selectedIndices);
+
+            for (int i = 0; i < numberOfSpawnersToFire; i++)
+            {
+                int indice = UnityEngine.Random.Range(0, spawners.Length);
+                while (selectedIndices.Contains(indice))
+                {
+                    indice = UnityEngine.Random.Range(0, spawners.Length);
+                }
+                selectedIndices[i] = indice;
+            }
+
+            for (int i = 0; i < selectedIndices.Length; i++)
+            {
+                spawners[selectedIndices[i]].Spawn(true, spawnVariation);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Spawns targets if enough time has elapsed and spawns only a certain percentage
+    /// of the spawners.
+    /// </summary>
+    /// <param name="timeRange">The range in seconds to have the spawner fire.</param>
+    /// <param name="pctRange">The percentage range you want indices chosen. .1f would be 10% of the spawners.</param>
+    private void SpawnTargets(D6Destroyer.ScriptableObjects.SpawnParameters parameters)
     {
         //Increase difficulty independent of spawn rate of targets.
         float stepTime = (Time.time - difficultyTimer);

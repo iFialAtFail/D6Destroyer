@@ -210,6 +210,11 @@ MonoBehaviour:
   - {fileID: 114720579784239170}
   - {fileID: 114578648816647344}
   difficulty: {fileID: 11400000, guid: b2e413c0eac7d4ca4bb7afd616016972, type: 2}
+  spawnParameters:
+  - {fileID: 11400000, guid: abbb57e7a98feaf46a09ac3159d7feda, type: 2}
+  - {fileID: 11400000, guid: a68767a98fd6e0b4c9b6d30fe345d249, type: 2}
+  - {fileID: 11400000, guid: f8234c2fba72f7e4b859b6dd07f5b791, type: 2}
+  - {fileID: 11400000, guid: fd13e0624c036cb49a5fe7ea0c526855, type: 2}
   powerup: {fileID: 114255633830741534, guid: c5b4a7e86385f2d46975750ceb4359eb, type: 2}
   antiPowerup: {fileID: 114589303299225524, guid: abd0c9ce085b34caf999db73f6089471,
     type: 2}
